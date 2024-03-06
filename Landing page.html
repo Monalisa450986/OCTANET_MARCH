@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Vacation</title>
+    <link rel="stylesheet" href="../bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+      function BookNow(){
+         document.getElementById("info").style.display = "none";
+         document.getElementById("navbar").style.display = "none";
+         document.getElementById("txtname").innerHTML = document.getElementById("name").value;
+         document.getElementById("txtemailid").innerHTML = document.getElementById("password").value;
+         document.getElementById("txtcity").innerHTML = document.getElementById("city").value;
+         document.getElementById("txtprice").innerHTML = document.getElementById("price").value;
+         document.getElementById("txtnumber").innerHTML=document.getElementById("number").value;
+       }
+
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:sans-serif;
+        }
+        body {
+            background-image: url("file://C:/Users/Public/Pictures/sv.jpeg");
+            background-size: cover;
+            width:100%;
+            height:100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        header {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 10px;
+            padding:20px;
+            color:navy;
+            
+        }
+        .brand-title {
+            font-size:45px;
+            font-family:Arial;
+            font-weight: bold;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color:maroon;
+            text-shadow: 3px 3px 4px blue;
+        }
+        h1:hover {
+            color:orangered;
+     }
+     .bi-calendar3-fill, .bi-telephone-fill {
+        font-size: 35px;
+        transition: 0.4s;
+     }
+     .bi-telephone-fill:hover {
+        color:orangered;
+     }
+     .bi-calendar3-fill:hover {
+        color:orangered;
+     }
+     
+     .icon span{
+        /* font-size:15px; */
+        padding:15px;
+        margin-left: 10px;
+        border-radius: 10px;
+        outline: none;
+        border:1px solid black;
+        transition: 1s;
+     }
+     .icon span:hover{
+        background-color: orangered;
+        color:white;
+     }
+     nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: rgba(199, 219, 103, 0.355);
+     }
+     nav span{
+        margin-left: 40px;
+        cursor: pointer;
+     }
+     nav span:hover {
+        color:orangered;
+        margin-top: 10px;
+        padding:5px 10px;
+        border-radius: 10px;
+        border:1px solid ;
+     }
+     nav button {
+        margin-right:10px;
+        padding: 20px 40px;
+        border: none;
+        border: 1px solid green;
+        outline:none;
+        background: transparent;
+        border-radius: 10px;
+        transition: 0.4s;
+
+     }
+     nav button:hover {
+        background-color: orangered;
+        color:white;
+     }
+     .info{
+        /* border:1px solid black; */
+        padding: 20px;
+        margin-top: 100px;
+     }
+     .main-subtitle{
+        font-size: 45px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color:darkred;
+     }
+     .main-title {
+            font-size:35px;
+            font-family:'Arial Narrow Bold', sans-serif;
+            font-weight:bold;
+     }
+     main{
+      
+      color:black;
+      padding:25px;
+     }
+     .info p{
+        width:400px;
+        margin-top: 20px;
+        font-family: Arial;
+        font-size: 16px;
+        color:black;
+     }
+     .info button {
+        padding:10px;
+     }
+     .img-position {
+      background-image: url("file://C:/Users/Public/Pictures/sm.jpeg");
+     }
+     section {
+      display:flex;
+      text-align: right;
+      padding:10px;
+      transition-duration: 0.4s;
+      }
+      .book {
+         display:grid;
+         grid-template-columns: 3fr 9fr;
+      }
+      .book .btn{
+       font-size: 25px;
+       margin-top: 100px;
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="brand-title">BLISSFUL.</h1>
+ </div>
+ 
+ <div class="d-flex">
+    <div>
+        <span class="bi bi-calendar3-fill"></span>
+        
+    </div>
+    <div><p>April-June</p></div>
+    <div>
+    <b>Vacation mood:on</b>
+    </div>
+ </div>
+ <div class="d-flex">
+    <div>
+        <span class="bi bi-telephone-fill"></span>
+    </div>
+ <div>
+ <p>Call us</p>
+ <b>+91 8907658900</b>
+ </div>
+ </div>
+ <div class="icon">
+    <span class="bi bi-instagram"></span>
+    <span class="bi bi-twitter"></span>
+    <span class="bi bi-facebook"></span>
+    <span class="bi bi-bell-fill"></span>
+ </div>
+    </header>
+    <nav>
+        <div>
+            <span>Home</span>
+            <span>About</span>
+            <span>Blog</span>
+            <span>Contact</span>
+            <span class="bi bi-search"></span>
+        </div>
+        <div>
+         <button data-bs-toggle="modal" data-bs-target="#book" class="btn btn-danger">Book Now<span class="bi bi-box-arrow-in-left"></span></button>
+         </div>
+         </div>
+    </nav>
+    <div class="modal" id="book">
+      <div class="modal-dialog dialog-fullscreen">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h3>Your Book</h3>
+               <button data-bs-dismiss="modal" class="btn btn-close"></button>
+            </div>
+            <div class="modal-body p-4">
+               <dl>
+                  <dt>Your Name:</dt>
+                  <dd>
+                     <input type="text" id="name" class="from-control">
+                     </dd>
+                     <dt>Email id:</dt>
+                     <dd>
+                        <input type="password" id="email" class="form-control">
+                     </dd>
+                  <dt>city:</dt>
+                  <dd>
+                     <input type="text" id="name" class="form-control">
+                  </dd>
+                  <dt>Price</dt>
+                  <dd>
+                     <input type="number" id="price" class="form-control">
+                  </dd>
+                  <dt>Mobile Number:</dt>
+                  <dd>
+                     <input type="number" id="number" class="form-control">
+                  </dd>
+               </dl>
+            </div>
+            <div class="modal-footer">
+               <button data-bs-dismiss="modal" onclick="BookNow()" class="btn btn-primary">Submit</button>
+               <button data bs-dismiss="modal" class="btn btn-danger">Cancle</button>
+               </div>
+            </div>
+         </div>
+  </div>
+  <div class="summary" id="info" style="display: none;">
+<dl class="row">
+   <dt class="col-3">Name:</dt>
+   <dd class="col-9" id="txtname"></dd>
+   <dt class="col-3">Email id:</dt>
+   <dd class="col-9" id="txtpassword"></dd>
+   <dt class="col-3">City:</dt>
+   <dd class="col-9" id="txtCity"></dd>
+   <dt class="col-3">Price:</dt>
+   <dd clas="col-9" id="txtprice"></dd>
+   <dt class="col-3">Mobile No:</dt>
+   <dd class="col-9" id="txtnumber"></dd>
+   </dl>
+    </div>
+    <main>
+        <div class="info">
+            <div class="main-subtitle my-2">Get Ready To Summer Vacation!</div>
+            <div class="main-title my-2">Best Summer Vacation.</div>
+            <p class="main-text">The day will be what you make it,so rise like the sun and start the day and enjoy every minute of it.</p>
+            <div class="mt-4">
+               <button class="btn btn-info"> Get Started Now <span class="bi bi-chevron-right"></span></button>
+               <button class="btn btn-warning"> LET'S GO<span class="bi bi-chevron-right"></span> </button>
+        </div>
+    </main>
+    <section>
+      <marquee scrollment="25" loop="5" scrollamount="20" width="100%">
+       <img src="file:///C:/Users/Public/Pictures/vc.jpg" width="300" height="300">
+       <img src="file:///C:/Users/Public/Pictures/summer.jpg" width="300" height="300">
+       <img src="file:///C:/Users/Public/Pictures/summer2.jpeg" width="300" height="300">
+       <img src="file:///C:/Users/Public/Pictures/summer3.webp" width="300" height="300">
+       <img src="file:///C:/Users/Public/Pictures/summer4.jpg" width="300" height="300">
+      </marquee>
+    </section>
+    <script src="../jquery/dist/jquery.js"></script>
+    <script src="../bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
